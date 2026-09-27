@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helpers2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jalamarn <jalamarn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abmusleh <abmusleh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:00:00 by jalamarn          #+#    #+#             */
-/*   Updated: 2026/05/13 19:01:13 by jalamarn         ###   ########.fr       */
+/*   Updated: 2026/05/14 15:31:10 by abmusleh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,12 @@ void	mainhelper(t_shell *shellstate)
 		}
 		if (g_lastsig == SIGINT)
 			shellstate->exitstatus = 130;
+		if (g_lastsig == SIGINT && line[0] == '\0')
+		{
+			g_lastsig = 0;
+			free(line);
+			continue ;
+		}
 		else
 			handle_line(shellstate, line);
 		g_lastsig = 0;

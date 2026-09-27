@@ -2,6 +2,8 @@
 
 *This project has been created as part of the 42 curriculum by jalamarn, abmusleh.*
 
+---
+
 # Description
 
 Minishell is a simplified Unix shell developed in C as part of the 42 curriculum.
@@ -154,8 +156,6 @@ AI tools were used during development for:
 * Understanding Unix system calls
 * Explaining shell behavior
 * Reviewing edge cases
-* Refactoring functions to satisfy Norminette
 * Generating testing ideas and documentation guidance
 
 All implementation decisions, coding, debugging, and integration were completed manually.
-
